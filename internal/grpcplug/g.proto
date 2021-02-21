@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "go.seankhliao.com/testrepo-287/internal/grpcplug";
+
+service Plug {
+  rpc SayHello(HelloReq) returns (HelloRes) {}
+}
+message HelloReq {
+  string n = 1;
+}
+message HelloRes {
+  string msg = 1;
+}
